@@ -1,0 +1,22 @@
+{
+    "name": "fluke",
+    "version": "0.0.1",
+    "description": "Testing your ISPs speed from a Cubie",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Eduardo Romero",
+    "license": "ISC",
+    "dependencies": {
+        "docooment": "^0.5.3",
+        "documentdb": "^1.9.0",
+        "dotenv": "^2.0.0",
+        "express": "^4.14.0",
+        "later": "^1.2.0",
+        "lodash": "^4.13.1",
+        "moment": "^2.14.1",
+        "moment-timezone": "^0.5.4",
+        "speedtest-net": "^1.2.6"
+    }
+}
