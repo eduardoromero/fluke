@@ -6,7 +6,7 @@ const DocumentClient = require('documentdb').DocumentClient;
 const speedTest = require('speedtest-net');
 const later = require('later');
 
-const servers = [ 1945, 3501, 6836, 2409, 6000, 7189, 4043, 1763, 6600, 7340];
+const servers = [ 1945, 3501, 6836, 2409, 6000, 7189, 4043, 1763, 6600, 7340, 1335, 5827, 4047, 5978, 5548];
 
 const db_host = process.env.DB_HOST;
 const key = process.env.MASTERKEY;
