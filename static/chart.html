@@ -88,8 +88,8 @@
     var data;
 
     Highcharts.setOptions({                                            // This is for all plots, change Date axis to local timezone
-        global : {
-            useUTC : false
+        global: {
+            useUTC: false
         }
     });
 
@@ -121,7 +121,7 @@
                     plotLines: [
                         {
                             color: 'red',
-                            zIndex: 10,
+                            zIndex: 5,
                             width: 1,
                             value: response.avg
                         }
@@ -154,16 +154,26 @@
                         }
                     }
                 },
+                tooltip: {
+                    valueDecimals: 0,
+                    formatter: function () {
+                        var s = '<b>' + Highcharts.dateFormat('%A, %b %e, %H:%M:%S', this.x) + '</b>';
 
+                        console.log(this.x, this.y, this);
+
+                        $.each(this.points, function () {
+                            s += '<br/>' + this.y.toFixed(2) + ' Mbps';
+                        });
+
+                        return s;
+                    }
+                },
 
                 series: [{
                     name: 'TotalPlay (100MBps)',
                     data: response.results,
                     type: 'areaspline',
                     threshold: null,
-                    tooltip: {
-                        valueDecimals: 2
-                    },
                     fillColor: {
                         linearGradient: {
                             x1: 0,
