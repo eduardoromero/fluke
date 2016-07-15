@@ -14,9 +14,20 @@ y pueden ser consultados a través de **data.js** y son graficados en **chart.ht
    ```
   DB_HOST=http://[hostazure].documents.azure.com:443/
   MASTERKEY=TUMASTERKEY
-  DOCUMENT_URL="dbs/[nombre_db]/colls/[collección]"
+  DOCUMENT_URL="dbs/[nombre_db]/colls/[colección]"
   DATA_PORT=8888
+  USER=username
+  LOCATION=office
    ```
+  
+  Dónde **DB_HOST** es la URL al DocumentDB de la cuenta de Azure. 
+  **MASTERKEY** es la llave de seguridad, proporcionada por Azure (en el panel de control).
+  **DOCUMENT_URL** es el URL a la colección, *nombre_db* es el nombre de la báse de datos, *colección* es el nombre que
+  se le da a la colección de documentos (desde el panel de control).
+  **DATA_PORT** es el puerto donde se grafica los *samples*
+  **LOCATION** es usado para poder correr las pruebas desde distintos puntos (por ejemplo casa vs oficina). 
+  **USER** es necseario para identificar el usuario que está realizando las pruebas (se obtiene del OS de ser posible). 
+   
 - Instala las dependencias
   ```
   npm install
